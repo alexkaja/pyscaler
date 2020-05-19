@@ -17,7 +17,7 @@ via "kubectl run".
  namespace = 'your_namespace' # str | object name and auth scope, such as for teams and projects
 ```
 2. Write app logic for the numpods var to match your scaling goals.
-* This app is a simple, contrived scaler that scales the pods the last digit of the current time every minute.
+* This app is a simple, contrived scaler that scales the pods the last digit of the current time, every minute.
 * E.g. 2:06 will result in numpods = 6
 3. Build the docker image and push to dockerhub.
 4. Install via _kubectl run_ or by generating a manifest / helm chart.
