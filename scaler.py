@@ -20,8 +20,8 @@ def main():
     namespace = 'default' # str | object name and auth scope, such as for teams and projects
     body = client.V1Scale(
                 metadata=V1ObjectMeta(
-                    name='commerce-nginx',
-                    namespace='default'
+                    name=name,
+                    namespace=namespace
                 ),
                 spec=V1ScaleSpec(
                     replicas=numpods
