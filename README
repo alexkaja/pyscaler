@@ -7,7 +7,7 @@ client library. I have pushed this image to a public repo on my dockerhub (akaja
 via "kubectl run".
 
 Usage:
-1. set the name, namespace values to match the app you want to scale
+1. In scaler.py, set the name, namespace values to match the app you want to scale.
 2. Write app logic for the numpods var to match your scaling goals
   a. This app is a simple, contrived scaler that scales the pods the last digit of the current time every minute.
     i. E.g. 2:06 will result in numpods = 6
