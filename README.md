@@ -8,6 +8,14 @@ via "kubectl run".
 
 ## Usage:
 1. In scaler.py, set the name, namespace values to match the app you want to scale.
+* The dockerhub image cited above has these values coded as "commerce" and "default", respectively.
+* If you use my image, you'll need to exec into the pod and edit the scaler.py file inside to match your evironment.
+
+```python
+ #set name, namespace, and body
+    name = 'your_app_name' # str | name of the Scale
+    namespace = 'your_namespace' # str | object name and auth scope, such as for teams and projects
+```
 2. Write app logic for the numpods var to match your scaling goals
   a. This app is a simple, contrived scaler that scales the pods the last digit of the current time every minute.
     i. E.g. 2:06 will result in numpods = 6
