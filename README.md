@@ -17,9 +17,10 @@ via "kubectl run".
 ## Out of Box Requirements:
 Kubernetes Service Account with access rules:
 rules:
+```yaml
 - apiGroups: ["apps"]
   resources: ["deployments"]
   verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
-
+```
 ## Links:
 https://github.com/kubernetes-client/python/blob/master/kubernetes/docs/AppsV1Api.md#replace_namespaced_deployment_scale
