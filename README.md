@@ -1,7 +1,7 @@
 # Kubernetes Python Client Time-Based Scaling App
 
 ## Summary: 
-This app is a small Python program that makes use of the official client library for Kubernetes to scale the deployment of 
+This app is a small Python program that makes use of the [official client library](https://github.com/kubernetes-client/python) for Kubernetes to scale the deployment of 
 an application. It is intended to be ran within a docker container based off the latest official Python image and Kubernetes 
 client library. I have pushed this image to a public repo on my dockerhub (akaja/commerce-scaler:0.0.1) for easy deployment 
 via "kubectl run".
@@ -23,7 +23,7 @@ via "kubectl run".
 4. Install via _kubectl run_ or by generating a manifest / helm chart.
 
 ## Out of Box Requirements:
-Kubernetes Service Account with access rules:
+The _.load_incluster_config()_ method automatically gives the application access to the default service acount; however, you will still need to grant further permissions:
 ```yaml
 rules:
 - apiGroups: ["apps"]
